@@ -15,7 +15,7 @@ class Env(tk.Tk):
         super(Env, self).__init__()
         self.action_space = ['u', 'd', 'l', 'r']
         self.n_actions = len(self.action_space)
-        self.title('Q Learning')
+        self.title('Q-learning for Grid world')
         self.geometry('{0}x{1}'.format(HEIGHT * UNIT, HEIGHT * UNIT))
         self.shapes = self.load_images()
         self.canvas = self._build_canvas()
@@ -50,7 +50,7 @@ class Env(tk.Tk):
     def load_images(self):
         drone = PhotoImage(
             #Image.open("img/robot.jpeg").resize((65, 65)))
-            Image.open("img/drone.jpg").resize((int(0.8*UNIT), int(0.8*UNIT))))
+            Image.open("img/dji-mavic-pro.jpg").resize((int(0.8*UNIT), int(0.8*UNIT))))
         triangle = PhotoImage(
             Image.open("img/tree.jpg").resize((int(0.8*UNIT), int(0.8*UNIT))))
         goal = PhotoImage(
